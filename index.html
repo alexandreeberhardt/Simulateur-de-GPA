@@ -24,7 +24,7 @@
         .columna {
             flex: 1; 
             padding: 10px; 
-            text-align : end;
+            text-align : center;
             border: 2px solid red;
             margin-right: 10px;
         }
@@ -110,13 +110,24 @@
 				        <label for="entreeBR">Entrée en Branche</label>
 		        	</div>     	     
         </div>  
-        
+        <br/>
         <div class="container">
 		    <div class="columna">
+		    <p>infos aditionnelles</p>
+				<select id="infos" name="infos" center>
+					  <option value="1">GPA global</option>
+					  <option value="2">GPA TC</option>
+					  <option value="3">GPA Branche</option>
+					  <option value="4">Ajout UV</option>
+				</select>  
+				<input type="submit" value="ajouter"> </input>
+		    
 		    </div>
+		    
+		    
 		    <div class="columnb">
 		    <input type="text" id="NomUV" name="UV" size=5 placeholder="Nom UV">
-		    <select id="categorie" name="categorie">
+		    <select id="categorie" name="categorie" required>
 			  <option value="1">CS</option>
 			  <option value="2">TM</option>
 			  <option value="3">TSH</option>
@@ -133,10 +144,36 @@
 			  <option value="1">Fx</option>
 			  <option value="0">F</option>
 			</select> 
+
 		    </div>
 		    <div class="columnc">
-		    <input type="checkbox" id="afiche" name="afiche" value="1" >
-			<label for="entreeTC">Entrée en TC</label>  
+		    <input type="checkbox" id="afiche1" name="afiche" value="1" checked>
+			<label for="afiche1">GPA global</label>  
+			<br/>
+			<input type="checkbox" id="afiche2" name="afiche" value="2" >
+			<label for="afiche2">GPA TC</label>  
+			<br/>
+			<input type="checkbox" id="afiche3" name="afiche" value="3" >
+			<label for="afiche3">GPA Branche</label>  
+			<br/>
+			<input type="checkbox" id="afiche4" name="afiche" value="4" >
+			<label for="afiche4">GPA CS Branche</label> 
+			<br/>
+			<input type="checkbox" id="afiche5" name="afiche" value="5" >
+			<label for="afiche5">GPA TM Branche</label> 
+			<br/>
+			<input type="checkbox" id="afiche6" name="afiche" value="6" >
+			<label for="afiche6">GPA TSH Branche</label> 
+			<br/>
+			<input type="checkbox" id="afiche7" name="afiche" value="7" >
+			<label for="afiche7">GPA CS TC</label> 
+			<br/>
+			<input type="checkbox" id="afiche8" name="afiche" value="8" >
+			<label for="afiche8">GPA TM TC</label> 
+			<br/>
+			<input type="checkbox" id="afiche9" name="afiche" value="9" >
+			<label for="afiche9">GPA TSH TC</label> 
+			
 		    
 		    </div>
         </div>

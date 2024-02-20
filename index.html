@@ -3,38 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <title>Simulateur GPA</title>
-    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .container {
+            display: flex;
+        }
+        .columng {
+            flex: 1; 
+            padding: 10px; 
+            text-align : end;
+            border: 2px solid red;
+            margin-right: 5px;
+        }
+        .columnd {
+            flex: 1; 
+            padding: 10px; 
+            text-align : start;
+            border: 2px solid blue;
+            margin-left: 5px;
+        }
+        .columna {
+            flex: 1; 
+            padding: 10px; 
+            text-align : end;
+            border: 2px solid red;
+            margin-right: 10px;
+        }
+        .columnb {
+            flex: 1; 
+            padding: 10px; 
+            text-align : center;
+            border: 2px solid blue;
+        }
+        .columnc {
+            flex: 1; 
+            padding: 10px; 
+            text-align : start;
+            border: 2px solid green;
+            margin-left: 10px;
+        }
+       
+        
+        
+        h1 {
+        text-align : center;
+        }
+        h2 {
+        text-align : center;
+        }
+        p{
+        text-align : center;
+        }
+        
+
+
+
+    </style>
 </head>
 <body>
     <header>
         <h1>Simulateur GPA</h1>
         <h2>Simule ton GPA en ligne</h2>
+        <p>choisissez votre semestre</p>
     </header>
     <main>
-        <div class="zoneOptions">
-            <p>chopisissez votre semestre</p>
-            <div class="optionSource">
-                <input type="radio" name="optionSource" id="TC" value="1" checked>
-                <label for="TC">TC</label>
-                <select id="semestre" name="semestre" >
-				  <option value="1">01</option>
-				  <option value="2">02</option>
-				  <option value="3">03</option>
-				  <option value="4">04</option>
-				  <option value="5">05</option>
-				  <option value="6">06</option>
-				  <option value="7">07</option>
-				  <option value="8">08</option>
-				  <option value="9">09</option>
-				  <option value="10">10</option>
-				  <option value="100">Je ne partirai jamais de l'UTC</option>
-				</select>
-                </br>
-                <input type="radio" name="optionSource" id="GX" value="2">
-                <label for="GX">GX</label>
-                
-            </div>           
-        </div>     
+        <div class="container" >
+
+		        	<div class="columng">
+				        <input type="radio" id="TC" name="sem" value="1" checked>
+				        <label for="TC">TC</label>
+				        <select id="semestre" name="semestre" >
+						  <option value="1">01</option>
+						  <option value="2">02</option>
+						  <option value="3">03</option>
+						  <option value="4">04</option>
+						  <option value="5">05</option>
+						  <option value="6">06</option>
+						  <option value="7">07</option>
+						  <option value="8">08</option>
+						  <option value="9">09</option>
+						  <option value="10">10</option>
+						  <option value="100">Je ne partirai jamais de l'UTC</option>
+						</select>
+				        <br/>
+				        <input type="radio" id="GX" name="sem" value="2">
+				        <label for="GX">GX</label> 
+				        <select id="semestre" name="semestre" >
+						  <option value="1">01</option>
+						  <option value="2">02</option>
+						  <option value="3">03</option>
+						  <option value="4">04</option>
+						  <option value="5">05</option>
+						  <option value="6">06</option>
+						  <option value="7">07</option>
+						  <option value="8">08</option>
+						  <option value="9">09</option>
+						  <option value="10">10</option>
+						  <option value="100">Je ne partirai jamais de l'UTC</option>
+						</select>               
+		        	</div>  
+            	
+            		<div class="columnd"> 
+				    	<input type="radio" id="entreeTC" name="entr" value="1" checked>
+				        <label for="entreeTC">Entrée en TC</label>  
+				        <br/>
+				        <input type="radio" id="entreeBR" name="entr" value="2">
+				        <label for="entreeBR">Entrée en Branche</label>
+		        	</div>     	     
+        </div>  
+        
+        <div class="container">
+		    <div class="columna">
+		    </div>
+		    <div class="columnb">
+		    <input type="text" id="NomUV" name="UV" size=5 placeholder="Nom UV">
+		    <select id="categorie" name="categorie">
+			  <option value="1">CS</option>
+			  <option value="2">TM</option>
+			  <option value="3">TSH</option>
+			  <option value="4">SP</option>
+			  <option value="5">autre</option>
+			</select>  
+			<input type="number" id="NBcredits" name="NBcredits" placeholder="Crédits" style="width: 60px;">  
+		    <select id="lettre" name="lettre">
+			  <option value="6">A</option>
+			  <option value="5">B</option>
+			  <option value="4">C</option>
+			  <option value="3">D</option>
+			  <option value="2">E</option>
+			  <option value="1">Fx</option>
+			  <option value="0">F</option>
+			</select> 
+		    </div>
+		    <div class="columnc">
+		    <input type="checkbox" id="afiche" name="afiche" value="1" >
+			<label for="entreeTC">Entrée en TC</label>  
+		    
+		    </div>
+        </div>
+        
+           
     </main>
 </body>
 </html>

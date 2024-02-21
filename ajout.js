@@ -1,4 +1,6 @@
-console.log("A")
+
+//On crée le formulaire complet pour ajouter une UV avec les select option et inputs
+
 let NomUV = document.createElement("input")
 NomUV.type="text";
 NomUV.id="NomUV";
@@ -52,8 +54,7 @@ LettreF.textContent="F";
 let Formulaire = document.createElement("form")
 
 
-
-// On ajoute le titre et le paragraphe dans la div
+//On insere les parties dans le formulaire
 
 Categorie.appendChild(Categorie1)
 Categorie.appendChild(Categorie2)
@@ -75,14 +76,11 @@ Formulaire.appendChild(Categorie)
 Formulaire.appendChild(Credits)
 Formulaire.appendChild(Lettre)
 
-// On ajoute la div dans le body
 let zone = document.getElementById("zone");
-
-
 let BoutonAjout = document.getElementById("ajouter");
 
+//On écoute le bouton "ajouter" et en cas de clic on ajoute le formulaire
 BoutonAjout.addEventListener("click", () => {
-console.log("FF")
 zone.appendChild(Formulaire)
 });
 

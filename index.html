@@ -59,6 +59,8 @@
 
     </style>
     <script src="script.js" defer></script>
+    <script src="ajout.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -70,7 +72,7 @@
         <div class="container" >
 
 		        	<div class="columng">
-				        <input type="radio" id="TC" name="sem" value="1">
+				        <input type="radio" id="TC" name="sem" value="1" checked>
 				        <label for="TC">TC</label>
 				        <br/>
 				        <input type="radio" id="GX" name="sem" value="2">
@@ -84,18 +86,21 @@
         <div class="container">
 		    <div class="columna">
 		    <p>infos aditionnelles</p>
+		    <form>
 				<select id="infos" name="infos" center>
 					  <option value="1">GPA global</option>
 					  <option value="2">GPA TC</option>
 					  <option value="3">GPA Branche</option>
 					  <option value="4">Ajout UV</option>
 				</select>  
-				<input type="submit" value="ajouter"> </input>
+				<input type="button"  value="ajouter"> </input>
+				</form>
 		    
 		    </div>
 		    
 		    
 		    <div class="columnb">
+		    <form>		
 		    <input type="text" id="NomUV" name="UV" size=5 placeholder="Nom UV">
 		    <select id="categorie" name="categorie" required>
 			  <option value="1">CS</option>
@@ -114,9 +119,14 @@
 			  <option value="1">Fx</option>
 			  <option value="0">F</option>
 			</select> 
-
+			<input type="button" id="ajouter" value="ajouter"> </input>
+			</form>
+			<div id="zone">
+			
+			</div>
 		    </div>
 		    <div class="columnc">
+		    
 		    <input type="checkbox" id="afiche1" name="afiche" value="1" checked>
 			<label for="afiche1">GPA global</label>  
 			<br/>
